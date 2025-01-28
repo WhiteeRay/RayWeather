@@ -23,17 +23,17 @@ public class MyApplication {
         String place_id;
         System.out.println("Welcome");
         boolean t = true;
-        while (t) {
-            try {
+        while(t){
+            try{
                 System.out.println("[1] View all cities");
                 System.out.println("[2] Get cities by id");
                 System.out.println("[3] Exit");
 
                 int choice = sc.nextInt();
-                switch (choice) {
+                switch(choice){
                     case 1:
                         ArrayList<City> cities = db.getAllCities();
-                        for (City city : cities) {
+                        for(City city : cities){
                             city.displayInfo();
                         }
                         break;
@@ -51,12 +51,12 @@ public class MyApplication {
                         System.out.println("Please select option between 1-3.");
                         break;
                 }
-            } catch (InputMismatchException e) {
+            }catch(InputMismatchException e){
                 System.out.println("Input must be integer " + e.getMessage());
 
-            } catch (Exception e) {
+            }catch(Exception e){
                 System.out.println("Exception " + e.getMessage());
             }
         }
-    }
-}
+            }
+                }
