@@ -8,4 +8,17 @@ public class Weather {
         this.day = day;
         this.weather = weather;
     }
+
+    public String getDay() {
+        return day;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    @Override
+    public String toString() {
+        return day + ": " + weather;
+    }
 }
