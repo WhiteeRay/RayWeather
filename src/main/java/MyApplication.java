@@ -1,6 +1,3 @@
-package service;
-
-
 import db.CityDatabase;
 import models.City;
 import models.Weather;
