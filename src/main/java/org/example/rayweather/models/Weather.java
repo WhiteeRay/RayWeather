@@ -1,4 +1,4 @@
-package models;
+package org.example.rayweather.models;
 
 public class Weather {
     private String day;

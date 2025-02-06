@@ -1,4 +1,4 @@
-package exceptions;
+package org.example.rayweather.exceptions;
 
 public class CityNotFoundException extends RuntimeException {
     public CityNotFoundException(String message) {
