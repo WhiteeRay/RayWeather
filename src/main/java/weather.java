@@ -8,8 +8,5 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Weather {
-    private String condition;
-    private double temperature;
-    private double humidity;
-    private double windSpeed;
+
 }
