@@ -17,12 +17,6 @@ import java.util.stream.Collectors;
 public class CityServiceImpl implements CityService {
     private CityRepository cityRepository;
 
-    @Override
-    public CityDto createCity(CityDto cityDto) {
-        City city = CityMapper.mapToCity(cityDto);
-        City savedCity = cityRepository.save(city);
-        return CityMapper.mapToCityDto(savedCity);
-    }
 
     @Override
     public CityDto getCityById(Long cityId) {
@@ -40,26 +34,6 @@ public class CityServiceImpl implements CityService {
                 .collect(Collectors.toList());
     }
 
-    @Override
-    public CityDto updateCity(Long cityId, CityDto updateCity) {
-        City city = cityRepository.findById(cityId).orElseThrow(
-                () -> new CityNotFoundException("City is not exists with given id: " + cityId)
-        );
-        city.setPlace_id(updateCity.getPlace_id());
-        city.setCity_name(updateCity.getCity_name());
-        City updatedCityObj = cityRepository.save(city);
-
-        return CityMapper.mapToCityDto(updatedCityObj);
-    }
-
-    @Override
-    public void deleteCity(Long cityId) {
-        City city = cityRepository.findById(cityId).orElseThrow(
-                () -> new CityNotFoundException("City is not exists with given id: " + cityId)
-        );
-        cityRepository.deleteById(cityId);
-
-    }
 
 
 }
