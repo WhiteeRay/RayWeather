@@ -6,7 +6,7 @@ import org.example.rayweather.entities.City;
 import org.example.rayweather.exceptions.CityNotFoundException;
 import org.example.rayweather.mappers.CityMapper;
 import org.example.rayweather.repositories.CityRepository;
-import org.example.rayweather.service.CityService;
+import org.example.rayweather.services.CityService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

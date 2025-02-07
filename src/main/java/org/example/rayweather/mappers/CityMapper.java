@@ -1,6 +1,6 @@
 package org.example.rayweather.mappers;
-import org.example.springbootdemoversion.dto.CityDto;
-import org.example.springbootdemoversion.entities.City;
+import org.example.rayweather.dto.CityDto;
+import org.example.rayweather.entities.City;
 
 public class CityMapper {
     public static CityDto mapToCityDto(City city){
