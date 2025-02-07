@@ -8,5 +8,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Weather {
+    private String day;
+    private String weather;
+
 
 }
