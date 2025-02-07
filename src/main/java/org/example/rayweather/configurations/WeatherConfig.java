@@ -1,4 +1,4 @@
-package org.example.springbootdemoversion.configurations;
+package org.example.rayweather.configurations;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
