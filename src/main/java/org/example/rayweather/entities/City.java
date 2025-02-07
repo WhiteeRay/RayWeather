@@ -15,3 +15,14 @@ import lombok.Setter;
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private Long id;
+
+    @Column(name="place_id")
+    private String place_id;
+    @Column(name="city_name")
+    private String city_name;
+
+
+}
+
