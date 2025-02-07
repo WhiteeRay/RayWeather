@@ -1,4 +1,4 @@
-package weather;
+package org.example.rayweather.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
