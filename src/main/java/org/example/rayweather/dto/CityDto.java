@@ -1,4 +1,4 @@
-package dto;
+package org.example.rayweather.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
