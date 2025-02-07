@@ -1,6 +1,6 @@
-package org.example.springbootdemoversion.repositories;
+package org.example.rayweather.repositories;
 
-import org.example.springbootdemoversion.entities.City;
+import org.example.rayweather.entities.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
