@@ -6,10 +6,7 @@ import org.example.rayweather.services.impl.CityServiceImpl;
 import org.example.rayweather.services.impl.WeatherServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,4 +32,24 @@ public class WeatherController {
 
         return ResponseEntity.ok(weathers);
     }
-}
+
+    @GetMapping(value = "{id}/update")
+    public ResponseEntity<List<Weather>> updateWeathers(@PathVariable("id") Long id) {
+        CityDto cityDto = cityService.getCityById(id);
+        String place_id = cityDto.getPlace_id();
+        if (place_id.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        List<Weather> weathers = weatherService.updateWeathers(place_id);
+
+        return ResponseEntity.ok(weathers);
+    }
+
+    @GetMapping("/evict-all")
+        public ResponseEntity<String> evictAllWeatherCache(){
+            weatherService.evictAllWeatherCache();
+            return ResponseEntity.ok("All weather cache evicted.");
+        }
+    }
+
+

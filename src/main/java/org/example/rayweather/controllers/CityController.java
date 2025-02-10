@@ -27,6 +27,12 @@ public class CityController {
         List<CityDto> cities = cityService.getAllCities();
         return ResponseEntity.ok(cities);
     }
+    @GetMapping("/update")
+    public ResponseEntity<List<CityDto>> updateAllCities(){
+        List<CityDto> cities = cityService.updateAllCities();
+        return ResponseEntity.ok(cities);
+    }
+
 
 
 

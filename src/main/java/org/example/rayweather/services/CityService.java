@@ -9,6 +9,4 @@ public interface CityService {
     List<CityDto> getAllCities();
 
 
-
-
 }
